@@ -19,14 +19,11 @@ def file_convert(file):
     alist = [None] * len(result[0])  # 创建一个与result[0]相同长度的空列表
     for i in range(len(result[0])):
         print(result[0][i][1][0])  # 输出识别结果
-        alist[i] = tuple(result[0][i][1][0])  # 将识别结果存储到alist中
-
-    '''
-    # 打印检测结果
-    for line in result:
-        print(line)'''
-
-    return alist
+        alist[i] = tuple(result[0][i][1][0]) # 将识别结果存储到alist中
+    blist = [None]*len(result[0])
+    for i in range(len(result[0])):
+        blist[i]=alist[i]
+    return blist
 
 
 iface = gr.Interface(file_convert, gr.File(), gr.Dataframe(), title="表格转换器", live=True,)
