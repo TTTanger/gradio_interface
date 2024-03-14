@@ -1,12 +1,9 @@
 import gradio as gr
 import cv2
 from paddleocr import PaddleOCR, draw_ocr
-
-
-'''input_list = {
-    gr.File(type="binary", label="File"),
-    gr.Dataframe(label="Dataframe"),
-}'''
+import win32com.client as win32
+import struct
+import os
 
 
 def file_convert(file):
