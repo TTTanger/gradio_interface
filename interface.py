@@ -7,6 +7,8 @@ import os
 
 
 def file_convert(file):
+
+    '''
     # 处理逻辑
     # 读取图像
     # 使用默认模型路径
@@ -17,10 +19,11 @@ def file_convert(file):
     for i in range(len(result[0])):
         print(result[0][i][1][0])  # 输出识别结果
         alist[i] = tuple(result[0][i][1][0]) # 将识别结果存储到alist中
-    blist = [None]*len(result[0])
-    for i in range(len(result[0])):
-        blist[i]=alist[i]
-    return blist
+
+    return alist
+'''
+
+    return file
 
 
 iface = gr.Interface(file_convert, gr.File(), gr.Dataframe(), title="表格转换器", live=True,)
