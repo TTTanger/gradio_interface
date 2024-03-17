@@ -73,6 +73,8 @@ def typeprocess(file_tbp, pdf_output):
                 typeprocess(file)
 
     pdf2img(pdf_output)     # 转换pdf后继续转换为img
+    return
+
 
 def img_identify(file_tbp):
 
